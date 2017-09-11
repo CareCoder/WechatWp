@@ -1,0 +1,37 @@
+package com.yq.wechat.itchar4j.utils.enums;
+
+/**
+ * 返回结构枚举类
+ * <p>
+ * Created by xiaoxiaomo on 2017/5/6.
+ */
+public enum ResultEnum {
+
+    SUCCESS("200", "成功"),
+    WAIT_CONFIRM("201", "请在手机上点击确认"),
+    WAIT_SCAN("400", "请扫描二维码"),
+    NOT_FOND_UUID("503", "没有UUID"),
+    INIT_CORE_FAIL("504", "初始化core信息失败");
+
+    private String code;
+    private String msg;
+
+    ResultEnum(String code, String msg) {
+        this.code = code;
+        this.msg = msg;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+//    public static MsgInfoEnum getCode(String code) {
+//        switch (code) {
+//            case "Text":
+//                return MsgInfoEnum.TEXT;
+//            default:
+//                return MsgInfoEnum.VIDEO;
+//        }
+//    }
+
+}
